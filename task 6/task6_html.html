@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>The Order Page</title>
+  </head>
+
+  <body>
+    <header>
+      <h2>Computer Components - Order Page</h2>
+    </header>
+    <div class="container">
+      <h3>Place your order</h3>
+      <form id="orderForm">
+        <label for="component">Choose your components:</label>
+        <select id="component" name="component">
+          <option value="cpu">PC</option>
+          <option value="gpu">GPU</option>
+          <option value="ram">RAM</option>
+          <option value="storage">Storage</option>
+          <option value="motherboard">Motherboard</option>
+          <option value="power-supply">Power Supply</option>
+          <option value="case">Computer Case</option>
+          <option value="monitor">Monitor</option>
+          <option value="keyboard">Keyboard</option>
+          <option value="mouse">Mouse</option>
+          <option value="headphones">Headphones</option>
+          <option value="speakers">Speakers</option>
+        </select>
+        <label for="quantity">Number of pieces</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          placeholder="Enter quantity"
+          min="1"
+        />
+        <label for="shipping">Transport Selections:</label>
+        <select name="shipping" id="shipping">
+          <option value="standard">Normal</option>
+          <option value="express">Urgent</option>
+        </select>
+        <button id="addButton" type="button">Place in Cart</button>
+        <button id="emptyCartButton" type="button">Empty Cart</button>
+        <button id="calculateTotalButton" type="button">Calculate Total</button>
+
+        <button id="removeLastItemButton" type="button">
+          Remove Last Item
+        </button>
+      </form>
+      <div id="orderSummary">
+        <h2>Order Summary</h2>
+        <div id="summaryItems"></div>
+        <p>Grand Total: <span id="totalPrice">$0.00</span></p>
+      </div>
+      <button id="placeOrderButton" type="button">Place Order</button>
+      <button id="downloadPdfButton" type="button">Download PDF</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+  </body>
+</html>
